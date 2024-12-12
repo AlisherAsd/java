@@ -38,7 +38,8 @@ public class VlozhCiklu {
         int a = scanner.nextInt();
         System.out.print("Введите второе число: ");
         int b = scanner.nextInt();
-        
+        int count = 0;
+
         // Предполагаем, что НОД равен 1, и ищем наибольший общий делитель
         int gcd = 1;
         
@@ -48,12 +49,13 @@ public class VlozhCiklu {
         // Цикл для нахождения НОД
         for (int i = 1; i <= min; i++) {
             if (a % i == 0 && b % i == 0) {
+                count++;
                 gcd = i; // обновляем НОД
             }
         }
         
         // Вывод результата
-        System.out.println("Наибольший общий делитель: " + gcd);
+        System.out.println("Наибольший общий делитель: " + gcd + " " + count + 1);
     }
     public static void main(String[] args) {
         PovtorCifr();

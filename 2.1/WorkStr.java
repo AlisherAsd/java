@@ -106,21 +106,21 @@ public class WorkStr {
         return count; // Возвращаем общее количество гласных
     }
 
-    public static String reverseWords(String s) {
+    public static void reverseWord(String s) {
         // Разбиваем строку на слова с помощью пробела
         String[] words = s.split(" ");
 
-        StringBuilder reversed = new StringBuilder();
+        String res = "";
 
         // Перебираем массив слов в обратном порядке
         for (int i = words.length - 1; i >= 0; i--) {
-            reversed.append(words[i]);
+            res += words[i];
             if (i != 0) {
-                reversed.append(" "); // Добавляем пробел между словами
+                res += " "; // Добавляем пробел между словами
             }
         }
 
-        System.out.println(reversed.toString()); // Возвращаем перевернутую строку
+        System.out.println(res); // Возвращаем перевернутую строку
     }
     public static void main(String[] args) {
         Perevorot("asd");
@@ -129,6 +129,7 @@ public class WorkStr {
         Annograma("aasd", "asda");
         MaxPodstrok("aaasd", "sasaaadf");
         PovtorStr("aass");
+        reverseWord("Hello World");
     }
 }
 
